@@ -4,130 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: lightblue;
-        }
-      
-    </style>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&family=Unbounded:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+   
 </head>
-<body bgcolor="bisque" >
-    <h1>To-Do-List</h1>
-    <dl><a href="" style="color: blue">main</a> </dl> 
-    <dl><a href="calender.html" style="color: red">calender</a></dl>
-    <dl> <a href="profile.html" style="color: red">profile</a></dl>
+<body>
+  <div class="head">
+    <h1>Ліки та Поради для Вашого Життя</h1>
+  </div>
+  
+  <div class="menu">
+    <a href="index.html" ><u>Головна</u></a>
+    <a href="products.html">Продукти</a>
+    <a href="services.html"> Послуги</a>
+    <a href="news.html"> Новини</a>
+  </div>
+  <div id="container">
+    <section>
+        <h2 class="blue">Ласкаво просимо до Фармацевтики!</h2>
+        <p style="color: black; font-size: 16px;">Ми пропонуємо широкий вибір лікарських засобів та медичних препаратів для забезпечення вашого здоров'я та благополуччя.</p>
+    </section>
+    <br><br><br>
+    <section class="featured-products">
+        <h2 class="blue">Вигідні  пропозиції</h2>
+        <div class="block">
+          <div class="block-small">
+            <img src="images/a8c4f12c-3453-4c44-8369-cd7942775797-medium.webp" alt=""style="width: 180px; ">
+            <p>Комбігрип Хот Сіп зі смаком лимону саше, 10 шт.</p>
+            Упаковка: <br>
+            <s>320грн</s> <br>
+           256грн
+          </div>
+          <div class="block-small">
+            <img src="images/fc5e18a9-c287-4ead-a670-0b8aac873039-medium.webp" alt=""style="width: 170px; height: 135px;">
+            <p>Анальгін-Дарниця таблетки по 0.5 г, 10 шт.</p>
+            Упаковка: <br>
+            <s> 24 грн</s> <br>
+           20,3 грн
+          </div>
+          <div class="block-small">
+            <img src="images/3e777aaf-66d1-4f50-b76c-5066b91ffd7c-medium.webp" alt=""style="width: 170px; height: 135px;">
+            <p>Назонол спрей назалльний 0,1%, 10 мл - Баум Фарм.</p>
+            Упаковка: <br>
+            <s> 165 грн</s> <br>
+           109 грн
 
-
-    <h2>Список завдань:</h2>
-<p><font size="5" color="blue"  style="font-weight: bold; font-style: italic;">Поглинути матеріал з <i>HTML</i></font></p>
-<p><font size="4" color="green"  style="font-weight: bold;">Пройти завдання з <b>CSS</b></font></p>
-<p><font size="3" color="red" face="Times New Roman" style="font-style: italic;">Вивчити <i>JavaScript</i></font></p>
-    
-
-    <a href="photo.html" target="_blank">
-        <img src="images/3.webp"  width="200" height="200">
-    </a>
-    
-    
-    <a href="photo2.html" target="_blank">
-        <img src="images/best-to-do-lists.jpg"  width="400" height="200">
-    </a>
+          </div>
+          <div class="block-small">
+            <img src="images/63998f15-b702-4729-9ce1-bfccde6ad6b3-medium.webp" alt=""style="width: 170px; height: 135px;">
+            <p>Лісобакт льодяники пресовані для горла, 30 шт.</p>
+            Упаковка: <br>
+            <s> 212 грн</s> <br>
+           96 грн
+          </div>
+        </div>
+           </section>
+           <br>
+    <section class="health-tips">
+        <h2 class="blue">Поради Здоров'я</h2>
+        <br>
+        <ul>
+            <li>Порада 1: Щоденна фізична активність</li>
+            <li>Порада 2: Збалансована дієта</li>
+            <li>Порада 3: Регулярні медичні перевірки</li>
+        </ul>
+    </section>
+</div>
 
   
-    <a href="photo3.html" target="_blank">
-        <img src="images/to-do-list-apps.jpg"  width="250" height="180">
-    </a>
-   
-    <table>
-        <caption><h3>Завдання</h3></caption>
-        <tr>
-            <th>Поглинути матеріал з HTML</th>
-            <th>Пройти завдання з CSS</th>
-            <th>Вивчити JavaScript</th>
-            <th>Прочитати книгу</th>
-        </tr>
-        <tr>
-            <td><img src="images/image1.jpeg"  width="100" height="80"></td>
-            <td><img src="images/html-e-css-1.webp" width="100" height="80"></td>
-            <td><img src="images/javascript.webp" width="120" height="80"</td>
-            <td><img src="images/завантаження.jpeg" width="80" height="80"</td>
-        </tr>
-        <tr>
-            <td><a href="https://w3schoolsua.github.io/html/index.html#gsc.tab=0" target="_blank">Вивчення HTML</a></td>
-            <td><a href="https://w3schoolsua.github.io/css/index.html#gsc.tab=0" target="_blank">Завдання CSS</a></td>
-            <td><a href="https://uk.javascript.info/" target="_blank">Вивчити JavaScript</a></td>
-            <td><a href="https://www.ukrlib.com.ua/world/printit.php?tid=21" target="_blank">Читати</a></td>
-        </tr>
-        <tr>
-            <td> до 01.04.2024</td>
-            <td>до 20.04.2024</td>
-            <td>до 05.05.2024</td>
-            <td>до 10.08.2024</td>
-        </tr>
-    </table>
- 
-    <br><br><br><br>
-
-
-    <table cellspacing="10" cellpadding="5">
-        <colgroup span="1"></colgroup>
-        <colgroup span="2"></colgroup>
-        <colgroup span="1"></colgroup>
-        <colgroup span="1"></colgroup>
-        <thead>
-          <tr>
-            <th colspan="4">Завдання</th>
-          </tr>
-          <tr>
-            <th>#</th>
-            <th>Завдання</th>
-            <th>Пріоритетність</th>
-            <th>Статус</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="category">
-            <td colspan="4">Робота</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Закінчити написання статті</td>
-            <td>1</td>
-            <td>у процесі</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Підготувати презентацію</td>
-            <td>2</td>
-            <td>не розпочато</td>
-          </tr>
-          <tr >
-            <td colspan="4">Персональне</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Купити овочі</td>
-            <td>3</td>
-            <td>зроблено</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>сходити на тренування</td>
-            <td>2</td>
-            <td>у процесі</td>
-          </tr>
-        </tbody>
-      </table>
-      <br><br><br><br>
-      <marquee behavior="scroll" direction="left" scrollamount="10"> <h2>Не забудь виконати завдання!!!</h2> </marquee>
 </body>
 </html>

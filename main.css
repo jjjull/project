@@ -16,57 +16,29 @@ h1{
     font-size: 20px;
     padding: 1%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-/* a {
-    text-decoration: none !important;
-    margin: 5% !important;
-    color: #007bff; 
-    font-weight: bold;
-    line-height: 2;
-} */
 
-/* #container{
-    margin: 0 auto;
-    width: 80%;
-    height: 100%;
-    background-color: white;
-    margin-top: 5%;
-    padding: 2%;
-    font-family: "Inclusive Sans", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    border-radius: 4%;
-} */
+
 .head{
     height: 80px;
     background-color: CornflowerBlue;
     color: white;
     padding: 1%;
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
    }
 body{
     background-color: rgb(233, 240, 245);
 }
-/* .block{
-    display: flex;
-    justify-content: space-around;
-    align-content: flex-start;
-    padding: 5%;
-    flex-wrap: wrap; 
 
-} */
-/* .block-small{
-    height: 320px;
-    border: 1px solid gray;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-    padding: 2%;
-    width: 240px;
-    margin-bottom: 1%;
-} */
-.blue{
-    color: cornflowerblue;
-}
 
 
 #services-table {
@@ -85,24 +57,6 @@ th,  td {
     text-align: left;
 }
 
-/* ol {
-    list-style-type: upper-roman; 
-    line-height: 1.5;
-    
-  }
-
-
-  
-  li {
-    margin-bottom: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
-    border-radius: 5px;
-  } */
-  /* dl {
-    margin-bottom: 20px;
-    margin-top: 20px;
-} */
 
 dt {
     font-weight: bold;
@@ -111,11 +65,6 @@ dt {
     color: cornflowerblue;
 }
 
-.menu a {
-    text-decoration: none; 
-    color: #007bff; 
-    margin-right: 20px; 
-  }
 .head h1 {
     color: #f6fafe; 
     font-family: 'Open Sans', sans-serif; 
@@ -137,12 +86,14 @@ dt {
     margin-bottom: 1%;
 }
 
+
 .menu + #container{
     margin: 0 auto;
+    
     width: 80%;
     height: 100%;
     background-color: white;
-    margin-top: 5%;
+    margin-top: 15%;
     padding: 2%;
     font-family: "Inclusive Sans", sans-serif;
     font-weight: 400;
@@ -169,3 +120,73 @@ dt {
     padding: 10px;
     border-radius: 5px;
 }
+a{
+    text-decoration: none;
+     margin-right: 20px; 
+ }
+ a:link {
+    color: pink;
+    font-weight: bold;
+} 
+
+ a:visited {
+
+    color: rgb(101, 238, 203);
+}
+
+ a:hover {
+    color: rgb(216, 26, 26);
+}
+
+ a:active {
+    font-weight: bold;
+    color: greenyellow;
+}
+
+.contact-info {
+   float: left;
+   color: white;
+   font-family: 'Playfair Display', serif;
+   font-family: 'Unbounded', cursive;
+}
+
+footer {
+    background-color: CornflowerBlue;
+    padding: 20px 0;
+    margin-top: 5%;
+    padding: 2%;
+}
+.resources{
+    text-align:right;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Unbounded', cursive;
+    
+}
+#container ol li:first-child {
+    color: red; 
+}
+
+.block-small:first-child {
+    background-color: CornflowerBlue;
+    color: white;
+    font-weight: bold; 
+}
+.blue {
+    color: blue;
+}
+
+.head h1:before {
+    content: '🌿';
+    
+}
+
+.health-tips li:before {
+    content: '​🍏'; 
+    margin-right: 8px; 
+}
+
+.menu a:after {
+    content: '|'; 
+    margin: 0 8px; 
+ }

@@ -14,7 +14,7 @@
    
 </head>
 <body>
-  <div class="head">
+  <div id="head">
     <h1>Ліки та Поради для Вашого Життя</h1>
   </div>
   
@@ -33,29 +33,30 @@
     <section class="featured-products">
         <h2 class="blue">Вигідні  пропозиції</h2>
         <div class="block">
-          <div class="block-small">
+          <div id="block-small">
             <img src="images/a8c4f12c-3453-4c44-8369-cd7942775797-medium.webp" alt=""style="width: 180px; ">
             <span>Комбігрип Хот Сіп зі смаком лимону саше, 10 шт.</span>
             Упаковка: <br>
             <s>320грн</s> <br>
            256грн
           </div>
-          <div class="block-small">
+          <div id="block-small">
             <img src="images/fc5e18a9-c287-4ead-a670-0b8aac873039-medium.webp" alt=""style="width: 170px; height: 135px;">
             <span>Анальгін-Дарниця таблетки по 0.5 г, 10 шт.</span>
             Упаковка: <br>
             <s> 24 грн</s> <br>
            20,3 грн
           </div>
-          <div class="block-small">
-            <img src="images/3e777aaf-66d1-4f50-b76c-5066b91ffd7c-medium.webp" alt=""style="width: 170px; height: 135px;">
-            <span>Назонол спрей назалльний 0,1%, 10 мл - Баум Фарм.</span>
+          <div id="block-small-fourth">
+            <img src="images/1ef91bd2-d755-497c-abf9-82f6b70d1ac2-medium.webp" alt=""style="width: 170px; height: 135px;">
+            <span>Атрогрел таблетки по 75 мг, 30 шт.</span>
             Упаковка: <br>
-            <s> 165 грн</s> <br>
-           109 грн
+            <s> 53,35грн</s> <br>
+            Блістер:
+            17,79грн
 
           </div>
-          
+        
         </div>
            </section>
            <br>
@@ -88,10 +89,50 @@
         <p><a href="https://www.medscape.com/">Medscape</a></p>
     </div>
   </div>
- 
+
 </footer>
 
 
+<script>
+//   let name=prompt("Будь ласка, введіть ваше ім'я")
+//   alert(`Доброго дня, ${name} Вітаємо Вас на сайті аптеки`);
+//   var confirmation = confirm("Ви впевнені, що хочете вийти з сайту?");
+//   if (confirmation == true) 
+//   {
+//   alert("Дякуємо за відвідування нашого сайту. До зустрічі!");
+//   } 
+//   else {
+//   alert("Ви залишаєтесь на нашому сайті. Щасливого перегляду!");
+// }
 
+
+
+
+
+// let elements = document.querySelectorAll('ul > li:last-child');
+// for (let elem of elements) {
+// alert(elem.textContent);
+// }
+
+
+// let element = document.getElementById('head');
+// let htmlContent = element.innerHTML; 
+// element.innerHTML = '<h1>Ліки</h1>'; 
+
+let element = document.getElementById('block-small-fourth');
+// Створюємо новий HTML-контент
+let newHTMLContent = `
+    <div id="new-block">
+      <img src="images/3e777aaf-66d1-4f50-b76c-5066b91ffd7c-medium.webp" alt=""style="width: 170px; height: 135px;">
+      <br><span>Назонол спрей назальний 0,1%, 10 мл - Баум Фарм.</span>
+            Упаковка: <br>
+            <s> 165 грн</s> <br>
+           109 грн
+    </div>
+`;
+
+
+</script>
+<script src="main.js"></script>
 </body>
 </html>

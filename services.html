@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <div class="head">
+    <div id="head">
         <h1>Ліки та Поради для Вашого Життя</h1>
       </div>
       
@@ -91,7 +91,32 @@
                 <p><a href="https://www.medscape.com/">Medscape</a></p>
             </div>
         </div>
-       
+       <script src="main.js"></script>
       </footer>
+      <script>
+      // Видаляємо останній рядок 
+document.querySelector('#services-table tbody tr:last-child').remove();
+
+  // Додаємо текст перед елементом з id "head"
+ document.getElementById('head').prepend('Забезпечте безпеку та ефективність свого лікування.');
+
+// Додаємо текст після елемента з id "container"
+var thankYouMessage = document.createElement('p');
+    thankYouMessage.textContent = 'Дякуємо за використання наших послуг!';
+    thankYouMessage.setAttribute('id', 'thank-you-message');
+    document.getElementById('container').after(thankYouMessage);
+
+ // Створюємо новий елемент <p> зі стилізованим текстом
+    var thankYouMessage = document.createElement('p');
+    thankYouMessage.textContent = 'Дякуємо за використання наших послуг!';
+    thankYouMessage.setAttribute('style', 'font-size: 18px; color: blue; font-weight: bold;margin:80px');
+
+    // Знаходимо елемент, який хочемо замінити
+    var oldElement = document.getElementById('thank-you-message');
+
+    // Замінюємо старий елемент на новий
+    oldElement.replaceWith(thankYouMessage);
+
+      </script>
 </body>
 </html>

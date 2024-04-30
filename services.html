@@ -94,28 +94,26 @@
        <script src="main.js"></script>
       </footer>
       <script>
+
       // Видаляємо останній рядок 
 document.querySelector('#services-table tbody tr:last-child').remove();
 
-  // Додаємо текст перед елементом з id "head"
- document.getElementById('head').prepend('Забезпечте безпеку та ефективність свого лікування.');
+
 
 // Додаємо текст після елемента з id "container"
-var thankYouMessage = document.createElement('p');
+var thankYouMessage = document.createElement('h3');
     thankYouMessage.textContent = 'Дякуємо за використання наших послуг!';
     thankYouMessage.setAttribute('id', 'thank-you-message');
     document.getElementById('container').after(thankYouMessage);
 
- // Створюємо новий елемент <p> зі стилізованим текстом
-    var thankYouMessage = document.createElement('p');
-    thankYouMessage.textContent = 'Дякуємо за використання наших послуг!';
-    thankYouMessage.setAttribute('style', 'font-size: 18px; color: blue; font-weight: bold;margin:80px');
+ // Створюємо новий елемент зі стилізованим текстом
+    var newMessage = document.createElement('h3');
+    newMessage.textContent = 'Ми вдячні за використання наших послуг!';
+    
 
     // Знаходимо елемент, який хочемо замінити
     var oldElement = document.getElementById('thank-you-message');
-
-    // Замінюємо старий елемент на новий
-    oldElement.replaceWith(thankYouMessage);
+    oldElement.replaceWith(newMessage);
 
       </script>
 </body>

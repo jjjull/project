@@ -74,6 +74,24 @@
         </dl>
         
       </div>
+        <!-- Форма для замовлення рецептурних ліків -->
+    <h2 style="text-align: center;">Замовлення рецептурних ліків</h2>
+    <form id="orderForm">
+        <label for="patientName">Ім'я пацієнта:</label>
+        <input type="text" id="patientName" name="patientName"><br><br>
+    
+        <label for="medicine">Ліки:</label>
+        <input type="text" id="medicine" name="medicine"><br><br>
+    
+        <label for="quantity">Кількість:</label>
+        <input type="text" id="quantity" name="quantity"><br><br>
+    
+        <input type="submit" value="Відправити замовлення">
+    </form>
+    <button class="button" data-action="orderMedicine">Замовити ліки</button>
+   <button class="button" data-action="findPharmacy">Знайти аптеку</button>
+   <button class="button" data-action="consultation">Консультація з фармацевтом</button>
+
       <footer>
         <div class="footer-content">
             <div class="contact-info">
@@ -93,28 +111,47 @@
         </div>
        <script src="main.js"></script>
       </footer>
-      <script>
+ 
 
-      // Видаляємо останній рядок 
-document.querySelector('#services-table tbody tr:last-child').remove();
+<!-- //       // Видаляємо останній рядок 
+// document.querySelector('#services-table tbody tr:last-child').remove();
 
 
 
-// Додаємо текст після елемента з id "container"
-var thankYouMessage = document.createElement('h3');
-    thankYouMessage.textContent = 'Дякуємо за використання наших послуг!';
-    thankYouMessage.setAttribute('id', 'thank-you-message');
-    document.getElementById('container').after(thankYouMessage);
+// // Додаємо текст після елемента з id "container"
+// var thankYouMessage = document.createElement('h3');
+//     thankYouMessage.textContent = 'Дякуємо за використання наших послуг!';
+//     thankYouMessage.setAttribute('id', 'thank-you-message');
+//     document.getElementById('container').after(thankYouMessage);
 
- // Створюємо новий елемент зі стилізованим текстом
-    var newMessage = document.createElement('h3');
-    newMessage.textContent = 'Ми вдячні за використання наших послуг!';
+//  // Створюємо новий елемент зі стилізованим текстом
+//     var newMessage = document.createElement('h3');
+//     newMessage.textContent = 'Ми вдячні за використання наших послуг!';
     
 
-    // Знаходимо елемент, який хочемо замінити
-    var oldElement = document.getElementById('thank-you-message');
-    oldElement.replaceWith(newMessage);
+//     // Знаходимо елемент, який хочемо замінити
+//     var oldElement = document.getElementById('thank-you-message');
+//     oldElement.replaceWith(newMessage); -->
 
-      </script>
+
+ <script>
+    // Функція для обробки події натискання на кнопку "Відправити замовлення"
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+       
+
+        //
+        const patientName = document.getElementById('patientName').value;
+        const medicine = document.getElementById('medicine').value;
+        const quantity = document.getElementById('quantity').value;
+
+        
+        const message = `Замовлення було отримано!\nІм'я пацієнта: ${patientName}\nЛіки: ${medicine}\nКількість: ${quantity}`;
+
+        
+        alert(message);
+    });
+</script>
+
+
 </body>
 </html>

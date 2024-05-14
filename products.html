@@ -25,13 +25,18 @@
           background-color: #f2f2f2;
           font-weight: bold;
       }
+      #container {
+            display: none; 
+        }
 
   </style>
 </head>
 <body>
     <div id="head">
         <h1>Ліки та Поради для Вашого Життя</h1>
+       
       </div>
+     
       
       <div class="menu">
         <a href="index.html" >Головна</a>
@@ -39,7 +44,12 @@
         <a href="services.html"> Послуги</a>
         <a href="news.html"> Новини</a>
       </div>
+
+   <div class="cont"><h2>Щоб переглянути наш асортимент, натисніть кнопку нижче:</h2>
+  <button id="showProductsBtn">Переглянути асортимент</button></div>
+
       <div id="container">
+       
         <section class="featured-products">
             
             <div class="block">
@@ -143,24 +153,23 @@
               </tr>
           </table>
       </div>
-      <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Контактна Інформація</h3>
-                <p>Телефон: +380123456789</p>
-                <p>Email: info@pharmacompany.com</p>
-                <p>Адреса: вул. І.Франка 33, Київ, Україна</p>
-            </div>
-            
-            <div class="resources">
-                <h4>Корисні Ресурси</h4>
-                <p><a href="https://www.pharmacytimes.com/">Pharmacy Times</a></p>
-                <p><a href="https://www.pharmencyclopedia.com.ua/">Фармацевтична енциклопедія</a></p> 
-                <p><a href="https://www.medscape.com/">Medscape</a></p>
-            </div>
-        </div>
-       
-      </footer>
+      
+    
+      
+     <script>
+        // Оголошення функції-обробника події
+        function showProducts() {
+            var container = document.getElementById("container");
+            container.style.display = "block"; // Змінюємо стиль на видимий
+        }
+
+        // Отримання посилання на кнопку
+        var productsButton = document.getElementById("showProductsBtn");
+
+        // Призначення функції-обробника події через властивість
+        productsButton.onclick = showProducts;
+    </script>
+      
       <script src="main.js"></script>
 </body>
 </html>

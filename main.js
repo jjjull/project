@@ -44,17 +44,17 @@
 
 
 
-// if (confirm("Перейти на сайт?")) {
-//     location.href = "https://uk.javascript.info/"; // Перенаправляє браузер на іншу URL
+// // if (confirm("Перейти на сайт?")) {
+// //     location.href = "https://uk.javascript.info/"; // Перенаправляє браузер на іншу URL
+// // }
+
+// // let elements = document.querySelectorAll('ul > li:last-child');
+// // for (let elem of elements) {
+// // alert(elem.textContent);
 // }
 
-// let elements = document.querySelectorAll('ul > li:last-child');
-// for (let elem of elements) {
-// alert(elem.textContent);
-// }
-
-let title= document.getElementById('head');
-title.innerHTML = '<h1>Ліки</h1>'; 
+// let title= document.getElementById('head');
+// title.innerHTML = '<h1>Ліки</h1>'; 
 
 
 
@@ -98,7 +98,7 @@ ul.append(newTip2);
 ul.append(newTip3);
 
 
-alert(head.textContent);
+
 
 
 

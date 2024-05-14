@@ -8,22 +8,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&family=Unbounded:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <style>
-
+    <style>
+      .blue {
+          color: blue;
+      }
+      .highlighted {
+          background-color: yellow;
+      }
   </style>
    
 </head>
 <body>
   <div id="head">
     <h1>Ліки та Поради для Вашого Життя</h1>
+     <!-- Призначення функції-обробнику події через атрибут  -->
+    <button onmouseover="displayDate()">Котра година?</button>
+    <p id="demo"></p>
   </div>
   
   <div class="menu">
-    <a href="index.html" > <u>Головна</u></a>
-    <a href="products.html">Продукти</a>
-    <a href="services.html"> Послуги</a>
-    <a href="news.html"> Новини</a>
-  </div>
+    <button data-action="goToPage" data-url="index.html">Головна</button>
+    <button data-action="goToPage" data-url="products.html">Продукти</button>
+    <button data-action="goToPage" data-url="services.html">Послуги</button>
+    <button data-action="goToPage" data-url="news.html">Новини</button>
+</div>
   <div id="container">
     <section>
         <h2 class="blue">Ласкаво просимо до Фармацевтики!</h2>
@@ -60,15 +68,20 @@
         </div>
            </section>
            <br>
-    <section class="health-tips">
-        <h2 class="blue">Поради Здоров'я</h2>
-        <br>
-        <ul>
-            <li>Порада 1: Щоденна фізична активність</li>
-            <li>Порада 2: Збалансована дієта</li>
-            <li>Порада 3: Регулярні медичні перевірки</li>
-        </ul>
-    </section>
+           <section class="health-tips">
+            <h2 class="blue">Поради Здоров'я</h2>
+            <br>
+            <ul id="health-tips-list">
+                <li>Порада 1: Щоденна фізична активність</li>
+                <li>Порада 2: Збалансована дієта</li>
+                <li>Порада 3: Регулярні медичні перевірки</li>
+            </ul>
+        </section>
+    <button id="serviceButton">Отримати фармацевтичний сервіс</button>
+
+    <!-- Блок для відображення повідомлення -->
+    <div id="messageBox"></div>
+
    
 </div>
 
@@ -80,7 +93,9 @@
           <p>Email: info@pharmacompany.com</p>
           <p>Адреса: вул. І.Франка 33, Київ, Україна</p>
       </div>
-      
+    
+
+
       
       <div class="resources">
         <h4>Корисні Ресурси</h4>
@@ -88,12 +103,39 @@
         <p><a href="https://www.pharmencyclopedia.com.ua/">Фармацевтична енциклопедія</a></p> 
         <p><a href="https://www.medscape.com/">Medscape</a></p>
     </div>
+
   </div>
 
+ 
 </footer>
+<script>
+  // Обробник натискання на кнопки
+  function handleButtonClick(event) {
+      var target = event.target;
+      var action = target.dataset.action;
+      var url = target.dataset.url;
+
+      if (action === "goToPage" && url) {
+          window.location.href = url;
+      }
+  }
+
+  // Додаємо обробник події для всіх кнопок у меню
+  var menu = document.querySelector('.menu');
+  menu.addEventListener('click', handleButtonClick);
+</script>
+
+<script>
+  document.getElementById('health-tips-list').addEventListener('click', function(event) {
+      var target = event.target;
+      if (target.tagName === 'LI') {
+          target.classList.toggle('highlighted');
+      }
+  });
+</script>
 
 <script src="main.js"></script>
-<script>
+<!-- <script>
   let name=prompt("Будь ласка, введіть ваше ім'я")
   alert(`Доброго дня, ${name} Вітаємо Вас на сайті аптеки`);
   var confirmation = confirm("Ви впевнені, що хочете вийти з сайту?");
@@ -107,7 +149,42 @@
 
 document.write("<p> 2024 PharmaCompany.Всі права захищені</p>");
 
+</script> -->
+<script>
+  // Об'єкт-обробник подій
+  var serviceHandler = {
+    // Метод для обробки події
+    handleEvent: function (event) {
+
+      var targetElement = event.currentTarget;
+
+      var messageBox = document.getElementById("messageBox");
+
+      messageBox.textContent = "Ви виграли спеціальну пропозицію! Перегляньте деталі на елементі: " + targetElement.tagName;
+
+      messageBox.style.display = "block";
+    }
+  };
+
+  // Отримання посилання на кнопку
+  var button = document.getElementById("serviceButton");
+
+  // Призначення обробника події за допомогою addEventListener і методу handleEvent
+  button.addEventListener("click", serviceHandler);
+
+
+// // Видалення обробника події за допомогою removeEventListener, вказуючи саме об'єкт serviceHandler
+// button.removeEventListener("click", serviceHandler);
+
+
 </script>
 
+
+<script>
+ 
+  function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+  }
+</script>
 </body>
 </html>

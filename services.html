@@ -88,10 +88,6 @@
     
         <input type="submit" value="Відправити замовлення">
     </form>
-    <button class="button" data-action="orderMedicine">Замовити ліки</button>
-   <button class="button" data-action="findPharmacy">Знайти аптеку</button>
-   <button class="button" data-action="consultation">Консультація з фармацевтом</button>
-
       <footer>
         <div class="footer-content">
             <div class="contact-info">
@@ -136,10 +132,8 @@
 
  <script>
     // Функція для обробки події натискання на кнопку "Відправити замовлення"
-    document.getElementById('orderForm').addEventListener('submit', function(event) {
+    document.getElementById('orderForm').addEventListener('submit', function() {
        
-
-        //
         const patientName = document.getElementById('patientName').value;
         const medicine = document.getElementById('medicine').value;
         const quantity = document.getElementById('quantity').value;
@@ -151,7 +145,6 @@
         alert(message);
     });
 </script>
-
 
 </body>
 </html>

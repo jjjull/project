@@ -109,20 +109,15 @@
  
 </footer>
 <script>
-  // Обробник натискання на кнопки
-  function handleButtonClick(event) {
-      var target = event.target;
-      var action = target.dataset.action;
+  document.querySelector('.menu').addEventListener('click', function(event) {
+      var target = event.target; //елемент, на якому спрацював обробник подій.
+      var action = target.dataset.action;// отримуємо значення атрибута, на якому був клік
       var url = target.dataset.url;
 
       if (action === "goToPage" && url) {
           window.location.href = url;
       }
-  }
-
-  // Додаємо обробник події для всіх кнопок у меню
-  var menu = document.querySelector('.menu');
-  menu.addEventListener('click', handleButtonClick);
+  });
 </script>
 
 <script>
@@ -135,21 +130,7 @@
 </script>
 
 <script src="main.js"></script>
-<!-- <script>
-  let name=prompt("Будь ласка, введіть ваше ім'я")
-  alert(`Доброго дня, ${name} Вітаємо Вас на сайті аптеки`);
-  var confirmation = confirm("Ви впевнені, що хочете вийти з сайту?");
-  if (confirmation == true) 
-  {
-  alert("Дякуємо за відвідування нашого сайту. До зустрічі!");
-  } 
-  else {
-  alert("Ви залишаєтесь на нашому сайті. Щасливого перегляду!");
-}
 
-document.write("<p> 2024 PharmaCompany.Всі права захищені</p>");
-
-</script> -->
 <script>
   // Об'єкт-обробник подій
   var serviceHandler = {
@@ -160,7 +141,7 @@ document.write("<p> 2024 PharmaCompany.Всі права захищені</p>");
 
       var messageBox = document.getElementById("messageBox");
 
-      messageBox.textContent = "Ви виграли спеціальну пропозицію! Перегляньте деталі на елементі: " + targetElement.tagName;
+      messageBox.textContent = "Ви виграли спеціальну пропозицію! Перегляньте деталі на елементі: " + targetElement;
 
       messageBox.style.display = "block";
     }

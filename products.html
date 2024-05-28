@@ -162,7 +162,7 @@
 
 
       // Додавання обробників подій для ефекту наведення на кнопки та блоки
-      var interactiveElements = document.querySelectorAll('.menu a, .featured-products .block div');
+      var interactiveElements = document.querySelectorAll('.block div');
         interactiveElements.forEach(function(element) {
             element.addEventListener('mouseover', function(event) {
                 if (event.relatedTarget && event.target.contains(event.relatedTarget)) return;

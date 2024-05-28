@@ -98,7 +98,44 @@ ul.append(newTip2);
 ul.append(newTip3);
 
 
+ // Подія click для списку порад з здоров'я
+ document.getElementById('health-tips-list').addEventListener('click', function(event) {
+  var target = event.target;
+  if (target.tagName === 'LI') {
+      target.classList.toggle('highlighted');
+  }
+});
 
+// Функція для відображення дати
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+// Обробник події для спеціальної пропозиції
+var serviceHandler = {
+  handleEvent: function (event) {
+      var targetElement = event.currentTarget;
+      var messageBox = document.getElementById("messageBox");
+      messageBox.textContent = "Ви виграли спеціальну пропозицію! Перегляньте деталі на елементі: " + targetElement;
+      messageBox.style.display = "block";
+  }
+};
+
+var button = document.getElementById("serviceButton");
+button.addEventListener("click", serviceHandler);
+      // Подія click для кнопок меню
+      document.querySelector('.menu').addEventListener('click', function(event) {
+        var target = event.target;
+        var action = target.dataset.action;
+        var url = target.dataset.url;
+    
+        if (action === "goToPage" && url) {
+            window.location.href = url;
+        }
+    });
+    
+
+    
 
 
 
